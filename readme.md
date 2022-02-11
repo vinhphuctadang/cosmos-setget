@@ -1,7 +1,7 @@
 # setget
 **setget** is a blockchain built using Cosmos SDK and Tendermint and created with [Starport](https://starport.com).
 
-## Get started
+## Getting started
 
 ### What this project does ?
 
