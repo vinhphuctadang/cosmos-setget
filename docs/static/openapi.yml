@@ -12574,6 +12574,74 @@ paths:
                         }
       tags:
         - Query
+  /vinhphuctadang/setget/setget/get:
+    get:
+      summary: Queries a list of Get items.
+      operationId: VinhphuctadangSetgetSetgetGet
+      responses:
+        '200':
+          description: A successful response.
+          schema:
+            type: object
+            properties:
+              value:
+                type: string
+        default:
+          description: An unexpected error response.
+          schema:
+            type: object
+            properties:
+              code:
+                type: integer
+                format: int32
+              message:
+                type: string
+              details:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    '@type':
+                      type: string
+                  additionalProperties: {}
+      tags:
+        - Query
+  /vinhphuctadang/setget/setget/params:
+    get:
+      summary: Parameters queries the parameters of the module.
+      operationId: VinhphuctadangSetgetSetgetParams
+      responses:
+        '200':
+          description: A successful response.
+          schema:
+            type: object
+            properties:
+              params:
+                description: params holds all the parameters of this module.
+                type: object
+            description: >-
+              QueryParamsResponse is response type for the Query/Params RPC
+              method.
+        default:
+          description: An unexpected error response.
+          schema:
+            type: object
+            properties:
+              code:
+                type: integer
+                format: int32
+              message:
+                type: string
+              details:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    '@type':
+                      type: string
+                  additionalProperties: {}
+      tags:
+        - Query
 definitions:
   cosmos.authz.v1beta1.Grant:
     type: object
@@ -19924,3 +19992,23 @@ definitions:
       and
 
       freezing clients
+  vinhphuctadang.setget.setget.MsgSetResponse:
+    type: object
+    properties:
+      result:
+        type: string
+  vinhphuctadang.setget.setget.Params:
+    type: object
+    description: Params defines the parameters for the module.
+  vinhphuctadang.setget.setget.QueryGetResponse:
+    type: object
+    properties:
+      value:
+        type: string
+  vinhphuctadang.setget.setget.QueryParamsResponse:
+    type: object
+    properties:
+      params:
+        description: params holds all the parameters of this module.
+        type: object
+    description: QueryParamsResponse is response type for the Query/Params RPC method.

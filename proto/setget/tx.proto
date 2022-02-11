@@ -7,7 +7,17 @@ option go_package = "github.com/vinhphuctadang/setget/x/setget/types";
 
 // Msg defines the Msg service.
 service Msg {
-    // this line is used by starport scaffolding # proto/tx/rpc
+      rpc Set(MsgSet) returns (MsgSetResponse);
+// this line is used by starport scaffolding # proto/tx/rpc
+}
+
+message MsgSet {
+  string creator = 1;
+  string x = 2;
+}
+
+message MsgSetResponse {
+  string result = 1;
 }
 
 // this line is used by starport scaffolding # proto/tx/message

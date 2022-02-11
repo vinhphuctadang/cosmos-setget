@@ -1,0 +1,12 @@
+syntax = "proto3";
+package vinhphuctadang.setget.setget;
+
+// this line is used by starport scaffolding # proto/tx/import
+
+option go_package = "github.com/vinhphuctadang/setget/x/setget/types";
+
+message Value {
+  string value = 1;
+}
+
+// this line is used by starport scaffolding # proto/tx/message
